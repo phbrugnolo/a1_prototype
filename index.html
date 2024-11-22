@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Catálogo de Produtos</h1>
+      <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar produtos..." />
+        <button id="search-button">Buscar</button>
+      </div>
+    </header>
+
+    <main>
+      <aside id="filters">
+        <h2>Filtros</h2>
+        <div>
+          <label for="category-select">Categoria:</label>
+          <select id="category-select">
+            <option value="todos">Todos</option>
+            <option value="organicos">Orgânicos</option>
+            <option value="reciclaveis">Recicláveis</option>
+          </select>
+        </div>
+        <div>
+          <label for="price-range">Preço:</label>
+          <input type="range" id="price-range" min="0" max="500" step="10" />
+          <span id="price-value">Até R$500</span>
+        </div>
+      </aside>
+
+      <section id="product-list"></section>
+
+      <section id="cart">
+        <h2>Carrinho</h2>
+        <div id="cart-items"></div>
+        <div id="cart-summary">
+          <p>Total: R$<span id="cart-total">0.00</span></p>
+          <button id="checkout-button">Finalizar Compra</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
